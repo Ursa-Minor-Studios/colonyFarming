@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://opftewjoctyr"]
+
+[ext_resource type="Script" uid="uid://dbv4qa4bi41r8" path="res://Assets/Scripts/carrot.gd" id="1_lx2kl"]
+[ext_resource type="Texture2D" uid="uid://cs4q41577m6nr" path="res://godot_logo_big.png" id="2_lx2kl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2m5a4"]
+size = Vector2(131, 131)
+
+[node name="Carrot" type="Area2D" unique_id=1089975743 groups=["Crops"]]
+rotation = -3.1415927
+script = ExtResource("1_lx2kl")
+
+[node name="Carrot" type="Sprite2D" parent="." unique_id=1863071399 groups=["Crops"]]
+scale = Vector2(0.075306825, 0.075306825)
+texture = ExtResource("2_lx2kl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1253099560]
+position = Vector2(0.5, -5.5)
+shape = SubResource("RectangleShape2D_2m5a4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

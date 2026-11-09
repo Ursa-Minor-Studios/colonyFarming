@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://8ok3mb442sv3"]
+
+[ext_resource type="Script" uid="uid://ojtehcvkt6yy" path="res://Assets/Scripts/potato.gd" id="1_2vmiq"]
+[ext_resource type="Texture2D" uid="uid://c3onsfnpnbkmp" path="res://icon.svg" id="1_k7rty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2m5a4"]
+size = Vector2(143.3241, 33.637833)
+
+[node name="Potato" type="Area2D" unique_id=1089975743 groups=["Crops"]]
+script = ExtResource("1_2vmiq")
+
+[node name="Potato" type="Sprite2D" parent="." unique_id=1863071399 groups=["Crops"]]
+texture = ExtResource("1_k7rty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1253099560]
+position = Vector2(0, -0.49999738)
+scale = Vector2(0.8930809, -3.7755108)
+shape = SubResource("RectangleShape2D_2m5a4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

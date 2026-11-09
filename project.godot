@@ -1,0 +1,34 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Pixel Farming 2"
+config/description="2D space colony farm builder game, sequal to Pixel Farming."
+config/tags=PackedStringArray("farming")
+run/main_scene="uid://c1h04dgvv3iis"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+UserPlacement="*uid://ci422ncevuarp"
+
+[global_group]
+
+Crops=""
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
